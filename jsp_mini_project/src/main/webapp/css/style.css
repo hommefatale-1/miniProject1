@@ -1,0 +1,187 @@
+@charset "UTF-8";
+body, h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 400;
+    color: #333;
+}
+#header_container{
+    height: 50px;
+    position:relative;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,.08);
+    background-color: #fff;
+    text-align: center;
+    
+}
+body {
+    background: #f7f8f9;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",NotoColorEmoji,"Segoe UI Symbol","Android Emoji",EmojiSymbols;
+    line-height: 1.3;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ol, ul{
+    list-style: none;
+}
+a{
+    color: #333;
+    text-decoration: none;
+    background-color: transparent;
+}
+a:hover{
+    color: red;
+}
+li{
+    margin: 10px;
+}
+.or{
+    position: relative;
+    display: block;
+    margin: 20px 0 19px;
+    color: #888;
+    font-size: 13px;
+    text-align: center;
+    line-height: 16px;
+}
+
+#content {
+    position: relative;
+    max-width: 394px;
+    padding: 0 17px;
+    margin: 67px auto 40px;
+}
+.login{
+    position: relative;
+    margin: 0 -17px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: 300;
+    letter-spacing: -1px;
+    color: #222;
+    line-height: 1.2;
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+.loginBtnList {
+    margin-top: 30px;
+}
+.uBtn {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    height: 54px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    word-break: break-all;
+}
+a.uBtn {
+    min-height: 54px;
+    line-height: 52px;
+}
+.uBtn.-icoType {
+    display: table;
+}
+.uBtn.-icoType .text {
+    display: table-cell;
+    padding: 0 55px;
+    line-height: 20px;
+    vertical-align: middle;
+    border-radius: 3px;
+}
+/* 색상  */
+.uBtn.-icoType.-phone {
+    background: #fff;
+    border-color: #ccc;
+    color: #222;
+}
+.uBtn.-icoType.-email {
+    background: #8a8c9b;
+}
+.uBtn.-icoType.-naver {
+    background: #03c75a;
+}
+.uBtn.-icoType.-facebook {
+    background: #0075ff;
+}
+.uBtn.-icoType.-apple {
+    background: #333;
+}
+/* 회사로고 */
+.uBtn.-icoType.-phone:before {
+    width: 30px;
+    height: 30px;
+    content: '';
+    overflow: hidden;
+    display: block;
+    text-indent: -999px;
+    background-repeat: repeat;
+    background-image: url(../images/phone.png);
+    }
+    .uBtn.-icoType.-email:before {
+        width: 30px;
+        height: 30px;
+        content: '';
+        overflow: hidden;
+        display: block;
+        text-indent: -999px;
+        background-repeat: repeat;
+        background-image: url(../images/email.png)
+    }
+    .uBtn.-icoType.-naver:before {
+        width: 30px;
+        height: 30px;
+        content: '';
+        overflow: hidden;
+        display: block;
+        text-indent: -999px;
+        background-repeat: repeat;
+        background-image: url(../images/naver.png)
+    }
+    .uBtn.-icoType.-facebook:before {
+        width: 30px;
+        height: 30px;
+        content: '';
+        overflow: hidden;
+        display: block;
+        text-indent: -999px;
+        background-repeat: repeat;
+        background-image: url(../images/facebook.png)
+    }
+    .uBtn.-icoType.-apple:before {
+        width: 30px;
+        height: 30px;
+        content: '';
+        overflow: hidden;
+        display: block;
+        text-indent: -999px;
+        background-repeat: repeat;
+        background-image: url(../images/apple.png)
+    }
+    .uBtn.-icoType:before {
+     position: absolute; 
+     left: 15px; 
+     top: 50%; 
+     -webkit-transform: translateY(-50%); 
+    transform: translateY(-50%);
+    }
+    .uCheckbox {
+        position: relative;
+        margin-top: 20px;
+        left: 45px;
+    }
+    .uJoin{
+        position: relative;
+        margin: 16px 0 0 0;
+        color: #333;
+        font-size: 14px;
+        line-height: 1.57;
+        text-align: center;
+    }
