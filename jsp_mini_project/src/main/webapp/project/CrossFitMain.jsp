@@ -6,12 +6,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CrossFit Kirby</title>
-<link rel="icon" href="../images/Crossfit.png" title="파비콘">
+<link rel="shortcut icon" href="../images/Crossfit.png" title="파비콘"
+	type="image/x-icon">
 <link rel="stylesheet" href="../css/CrossFitMain.css">
 <style>
 </style>
 </head>
 <body>
+	<%
+	request.setCharacterEncoding("UTF-8");
+	%>
 	<header>
 		<h1>CrossFit Kirby</h1>
 		<nav>

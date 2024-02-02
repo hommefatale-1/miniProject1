@@ -2,123 +2,126 @@
 /* CrossFitMain.css */
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
 }
 
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px;
 }
 
 header a {
-    text-decoration: none;
-    color: #fff;
+	text-decoration: none;
+	color: #fff;
 }
 
 .menu {
-    display: flex;
+	display: flex;
 }
 
 .menu a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	padding: 10px 15px;
+	display: block;
 }
 
 .dropdown {
-    position: relative;
+	position: relative;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
-    top: 40px; /* 조절 가능한 값으로 수정 */
+	display: none;
+	position: absolute;
+	background-color: #333;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+	top: 40px;
+	/* 조절 가능한 값으로 수정 */
 }
 
 .dropdown-content a {
-    color: #fff;
-    padding: 10px 15px; /* 조절 가능한 값으로 수정 */
-    display: block;
+	color: #fff;
+	padding: 10px 15px;
+	/* 조절 가능한 값으로 수정 */
+	display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+	display: block;
 }
 
 .login-container {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .login-container button {
-    margin-left: 10px;
-    padding: 8px 15px;
-    background-color: #03c75a;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+	margin-left: 10px;
+	padding: 8px 15px;
+	background-color: #03c75a;
+	color: #fff;
+	border: none;
+	cursor: pointer;
 }
 
 .main-section {
-    padding: 20px;
+	padding: 20px;
 }
+
 .dropdown {
-    position: relative;
+	position: relative;
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #333;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    z-index: 1;
+	display: none;
+	position: absolute;
+	background-color: #333;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+	z-index: 1;
 }
 
 .dropdown-content a {
-    color: #fff;
-    padding: 12px 16px;
-    display: block;
+	color: #fff;
+	padding: 12px 16px;
+	display: block;
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+	display: block;
 }
 
 .login-container {
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 }
 
 .login-container button {
-    margin-left: 10px;
-    padding: 8px 15px;
-    background-color: #03c75a;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+	margin-left: 10px;
+	padding: 8px 15px;
+	background-color: #333;
+	color: #fff;
+	border: none;
+	cursor: pointer;
 }
 
 .main-section {
-    padding: 20px;
+	padding: 20px;
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+	background-color: #333;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
 }
