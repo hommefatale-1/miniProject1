@@ -4,7 +4,7 @@
 <html >
 <head>
 <meta charset="UTF-8">
-<title>아이디 확인</title>
+<title>CrossFit Kirby 아이디 중복확인</title>
 </head>
 <body>
 	<form name="join">

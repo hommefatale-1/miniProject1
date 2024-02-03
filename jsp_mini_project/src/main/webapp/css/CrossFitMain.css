@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+
+
 body {
 	margin: 0;
 	padding: 0;
@@ -16,6 +18,16 @@ header {
 	justify-content: space-between;
 	position: relative;
 	overflow: hidden;
+	text-decoration: none;
+
+}
+h1 a{
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	margin: 0 10px;
+	border-radius: 5px;
+	transition: background-color 0.3s;
 }
 
 nav {
@@ -42,7 +54,8 @@ nav a:hover {
 	align-items: center;
 }
 
-input.login {
+input.login ,
+input.loginOut {
 	padding: 8px 15px;
 	border: none;
 	border-radius: 5px;

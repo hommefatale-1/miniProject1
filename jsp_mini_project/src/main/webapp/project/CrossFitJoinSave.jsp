@@ -35,7 +35,7 @@
 	/*oracle정보 호촐하여 저장  */
 	stmt.executeUpdate("INSERT INTO CROSSFITMEMBERS VALUES('" + id + "','" + pwd + "','" + name + "','" + phone + "','"
 			+ gender + "','" + birth + "','" + address + "','" + registration + "','" + start + "','" + end + "','"
-			+ membership + "','" + hobby + "','" + comment + "')");
+			+ membership + "','" + hobby + "','" + comment + "','"+ 0 +"')");
 	%>
 </body>
 </html>

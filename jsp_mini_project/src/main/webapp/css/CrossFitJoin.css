@@ -59,12 +59,11 @@ textarea {
 }
 
 input[type="submit"],
-input[type="reset"] {
+input[type="reset"],
+input[type="button"] {
 	background-color: #3498db;
 	/* 남성적인 블루 톤 사용 */
 	color: #fff;
-	padding: 12px 24px;
-	/* 더 큰 패딩 */
 	border: none;
 	border-radius: 8px;
 	cursor: pointer;
@@ -73,7 +72,8 @@ input[type="reset"] {
 }
 
 input[type="submit"]:hover,
-input[type="reset"]:hover {
+input[type="reset"]:hover,
+input[type="button"]:hover {
 	background-color: #2980b9;
 	/* hover 시 더 어두운 블루 톤으로 변경 */
 }

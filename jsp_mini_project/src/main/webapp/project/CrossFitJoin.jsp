@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>크로스핏 커비 회원가입</title>
+<title>CrossFit Kirby 회원가입</title>
 <link rel="icon" href="../images/Crossfit.png" title="파비콘">
 <link rel="stylesheet" href="../css/CrossFitJoin.css">
 <style>
@@ -51,10 +51,7 @@
 	width: 100%;
 }
 
-img {
-	width: 100%;
-	height: auto;
-}
+
 </style>
 </head>
 <body>
@@ -176,6 +173,7 @@ img {
 			<div>
 				<input type="submit" value="가입하기" onclick="return validateForm()">
 				<input type="reset" value="초기화">
+				<input type="button" value="되돌아가기" onclick="history.back()">
 			</div>
 		</form>
 	</div>
@@ -200,7 +198,7 @@ img {
 		// 중복 확인과 비밀번호 확인 결과를 변수에 저장
 		var isIdValid = fnIdCheck(false);
 		var isPwdValid = fnPwdCheck();
-
+		
 		// 중복 확인과 비밀번호 확인 결과에 따라 처리
 		if (!isIdValid || !isPwdValid) {
 			// 문제가 있으면 모달 창을 열어 메시지를 표시하고 폼 제출을 막음
@@ -312,5 +310,8 @@ img {
 		var modal = document.getElementById("myModal");
 		// 모달 창 닫기
 		modal.style.display = "none";
+	}
+	function fnback() {
+		
 	}
 </script>
