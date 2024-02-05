@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CrossFit Kirby 로그인 메인페이지</title>
+<title> 로그인 메인페이지</title>
 <link rel="icon" href="../images/Crossfit.png" title="파비콘">
 <link rel="stylesheet" href="../css/style.css">
 <style>
@@ -90,23 +90,23 @@
 						</span>
 					</div>
 				</li>
-				<li><input class="in" type="submit" value="로그인"
-					onclick="return fnlogin()"></li>
-				<span class="or"><span>또는</span></span>
-				<li><a href="#none" class="uBtn -icoType -phone"><span
-						class="text">휴대폰 번호로 로그인</span></a></li>
+				<li><input class="in" type="submit" value="로그인" onclick="return fnlogin()"></li>
+				<span class="or">또는</span>
+				
+				<li><a href="#none" class="uBtn -icoType -phone">
+				<span class="text">휴대폰 번호로 로그인</span></a></li>
 
 				<li><a href="#none" class="uBtn -icoType -email"> <span
-						calss="text">이메일로 로그인</span></a></li>
+						class="text">이메일로 로그인</span></a></li>
 
 				<li><a href="#none" class="uBtn -icoType -naver"> <span
-						calss="text">네이버로로 로그인</span></a></li>
+						class="text">네이버로로 로그인</span></a></li>
 
 				<li><a href="#none" class="uBtn -icoType -facebook"> <span
-						calss="text">페이스북으로 로그인</span></a></li>
+						class="text">페이스북으로 로그인</span></a></li>
 
 				<li><a href="#none" class="uBtn -icoType -apple"> <span
-						calss="text">애플로 로그인</span></a></li>
+						class="text">애플로 로그인</span></a></li>
 			</ul>
 			<div class="uCheckbox">
 				<label> <input type="checkbox"> <span class="text">로그인상태

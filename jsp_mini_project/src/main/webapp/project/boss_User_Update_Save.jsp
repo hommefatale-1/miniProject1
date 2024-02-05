@@ -8,7 +8,6 @@
 </head>
 <body>
 	<%@ include file="dbconn.jsp"%>
-	<!--post 방식의 한글처리  -->
 	<%
 	request.setCharacterEncoding("UTF-8");
 	String id = request.getParameter("userId");
@@ -32,14 +31,44 @@
 	String phone = phone1 + phone2 + phone3;
 	String birth = birth_Year + birth_Month + birth_Day;
 
+	out.println(
+			"UPDATE CROSSFITMEMBERS SET "
+					+ "PASSWORD ='"+ pwd +"',"
+					+ "FULL_NAME ='"+ name +"',"
+					+ "PHONE_NUMBER ='"+ phone +"',"
+					+ "GENDER ='"+ gender +"',"
+					+ "BIRTH_DATE='"+ birth +"',"
+					+ "ADDRESS='"+ address +"',"
+					+ "REGISTRATION_DATE='"+ registration +"',"
+					+ "START_DATE='"+ start +"',"
+					+ "END_DATE='"+ end +"',"
+					+ "MEMBERSHIP_TYPE='"+ membership +"',"
+					+ "HOBBY='"+ hobby +"',"
+					+ "CMT='"+comment +"'"	
+					+ " WHERE MEMBER_ID = '" + id + "'"
+			);
 	/*oracle정보 호촐하여 저장  */
-	stmt.executeUpdate("INSERT INTO CROSSFITMEMBERS VALUES('" + id + "','" + pwd + "','" + name + "','" + phone + "','"
-			+ gender + "','" + birth + "','" + address + "','" + registration + "','" + start + "','" + end + "','"
-			+ membership + "','" + hobby + "','" + comment + "','"+ 0 +"')");
+	/* stmt.executeUpdate(
+			"UPDATE CROSSFITMEMBERS SET "
+			+ "PASSWORD ='"+ pwd +"',"
+			+ "FULL_NAME ='"+ name +"',"
+			+ "PHONE_NUMBER ='"+ phone +"',"
+			+ "GENDER ='"+ gender +"',"
+			+ "BIRTH_DATE='"+ birth +"',"
+			+ "ADDRESS='"+ address +"',"
+			+ "REGISTRATION_DATE='"+ registration +"',"
+			+ "START_DATE='"+ start +"',"
+			+ "END_DATE='"+ end +"',"
+			+ "MEMBERSHIP_TYPE='"+ membership +"',"
+			+ "HOBBY='"+ hobby +"',"
+			+ "CMT='"+comment +"'"	
+			+ " WHERE MEMBER_ID = '" + id + "'" 
+			); */
 	%>
 </body>
+
 </html>
 <script>
-	alert("회원가입 해주셔서 감사합니다");
-	location.href = "CrossFitLogin.jsp"
+	/* alert("회원정보를 수정하였습니다");
+	location.href = "CrossFitLogin.jsp" */
 </script>

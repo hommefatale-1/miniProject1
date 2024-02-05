@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CrossFit Kirby 메인화면</title>
 <link rel="shortcut icon" href="../images/Crossfit.png" title="파비콘" type="image/x-icon">
-<!-- <link rel="stylesheet" href="../css/CrossFitMain.css"> -->
+
 <style>
 @charset "UTF-8";
 body {
@@ -138,20 +138,21 @@ footer {
 			<a href="CrossFitPromotion.jsp">promotion</a> 
 			<a href="#">Sns</a> 
 			<a href="#">Coach</a> 
-			<a href="#">Member</a> 
+			<a href="CrossFitMember.jsp">Member</a> 
 			<a href="#">Facility</a> 
 			<a href="#">Event</a>
 			<a href="#">Place</a> 
 			<a href="#">Enquire</a>
 		</nav>
 		<%
+		out.println(session.getAttribute("id"));
 		String userId = (String) session.getAttribute("id");
 		if (userId != null && !userId.isEmpty()) {
 			// 세션에 id가 있는 경우 로그인 상태로 간주
 		%>
 		<div class="right-header">
 			<input class="loginOut" type="button" value="로그인아웃"
-				onclick="fnloinOut()">
+				onclick="fnloginOut()">
 		</div>
 		<!-- 로그아웃 페이지로 이동하도록 설정 -->
 		<%
@@ -202,7 +203,7 @@ footer {
 			location.href = "CrossFitLogin.jsp";
 		}
 		/* 로그인 아웃 화면으로 이동 */
-		function fnloinOut() {
+		function fnloginOut() {
 			location.href = "CrossFitLoginOut.jsp";
 		}
 	</script>
