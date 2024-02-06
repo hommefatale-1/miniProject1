@@ -94,71 +94,6 @@ input.login, input.loginOut {
 	animation: fade 5s infinite;
 }
 
-@
-keyframes fade { 0%, 100% {
-	opacity: 0;
-}
-
-25
-
-
-
-
-
-
-
-
-
-
-%
-,
-75
-
-
-
-
-
-
-
-
-
-
-%
-{
-opacity
-
-
-
-
-
-
-
-
-
-
-:
-
-
-
-
-
-
-
-
-
-
-1
-
-
-
-
-
-
-
-
-;
-}
-}
 /* 이미지 */
 .mySlides img {
 	width: 100%;
@@ -191,10 +126,14 @@ footer {
 			<a href="CrossFitMain.jsp">CrossFit Kirby</a>
 		</h1>
 		<nav>
-			<a href="CrossFitPromotion.jsp">promotion</a> <a href="#">Sns</a> <a
-				href="#">Coach</a> <a href="CrossFitMember.jsp">Member</a> <a
-				href="#">Facility</a> <a href="#">Event</a> <a href="#">Place</a> <a
-				href="#">Enquire</a>
+			<a href="CrossFitPromotion.jsp">promotion</a> 
+			<a href="#">Sns</a> 
+			<a href="#">Coach</a> 
+			<a href="CrossFitMember.jsp">Member</a> 
+			<a href="CrossFit_Board_list.jsp">post</a> 
+			<a href="#">Event</a>
+			<a href="#">Place</a> 
+			<a href="#">Enquire</a>
 		</nav>
 		<%
 		if (userId != null && !userId.isEmpty()) {

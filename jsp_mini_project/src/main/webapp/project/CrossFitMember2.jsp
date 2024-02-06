@@ -103,10 +103,14 @@ th {
 				<a href="CrossFitMain.jsp">CrossFit Kirby</a>
 			</h1>
 			<nav>
-				<a href="CrossFitPromotion.jsp">promotion</a> <a href="#">Sns</a> <a
-					href="#">Coach</a> <a href="CrossFitMember.jsp">Member</a> <a
-					href="#">Facility</a> <a href="#">Event</a> <a href="#">Place</a> <a
-					href="#">Enquire</a>
+				<a href="CrossFitPromotion.jsp">promotion</a> 
+				<a href="#">Sns</a> 
+				<a href="#">Coach</a> 
+				<a href="CrossFitMember.jsp">Member</a> 
+				<a href="CrossFit_Board_list.jsp">post</a>  
+				<a href="#">Event</a> 
+				<a href="#">Place</a> 
+				<a href="#">Enquire</a>
 			</nav>
 
 			<div class="right-header">
@@ -161,8 +165,8 @@ th {
 					<td><%=rs.getString("CMT")%></td>
 					<td><input type="button"
 						onclick="userDelete('<%=rs.getString("MEMBER_ID")%>')" value="삭제"></td>
-					<td><%=rs.getString("CNT")%> <input type="button"
-						onclick="user_init('<%=rs.getString("MEMBER_ID")%>')" value="초기화">
+					<td><%=rs.getString("CNT")%> 
+					<input type="button" onclick="user_init('<%=rs.getString("MEMBER_ID")%>')" value="초기화">
 					</td>
 				</tr>
 				<%
