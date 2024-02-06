@@ -90,6 +90,11 @@ th {
 	request.setCharacterEncoding("UTF-8");
 	String userId = (String) session.getAttribute("id");
 	String sql = "SELECT * FROM CROSSFITMEMBERS";
+	String word = request.getParameter("keyword");
+	String keyword = word != null ? word : "";
+	if (keyword != null) {
+		sql += " WHERE FULL_NAME LIKE '%" + keyword + "%'" + " OR MEMBER_ID LIKE '%" + keyword + "%'";
+	}
 	ResultSet rs = stmt.executeQuery(sql);
 	%>
 	<form name="user_list">
@@ -122,16 +127,18 @@ th {
 		<section>
 			<div>
 				<span>검색어 :</span> <input type="text" name="keyword"
-					value="<%=request.getParameter("keyword")%>">
-				<inpu type="button" value="검색하기" onclick="fnsearch()">
+					value="<%=keyword%>"> <input type="button" value="검색하기"
+					onclick="fnsearch()">
 			</div>
 			<table border="1">
 				<tr>
 					<th>회원 이름</th>
-					<th>회원 이름</th>
+					<th>회원 성별</th>
 					<th>회원 생년월일</th>
 					<th>회원 취미</th>
 					<th>회원 자기소개</th>
+					<th>계정 수정</th>
+					<th>계정 삭제</th>
 				</tr>
 				<%
 				while (rs.next()) {
@@ -142,11 +149,31 @@ th {
 					<td><%=rs.getString("BIRTH_DATE")%></td>
 					<td><%=rs.getString("HOBBY")%></td>
 					<td><%=rs.getString("CMT")%></td>
+					<td>
+						<%
+						String idch = rs.getString("MEMBER_ID");
+						if (userId != null && userId.equals(idch)) {
+						%> <input type="button"
+						onclick="userUpdate('<%=rs.getString("MEMBER_ID")%>')" value="수정">
+						<%
+						}
+						%>
+					</td>
+					<td>
+						<%
+						if (userId != null && userId.equals(idch)) {
+						%> <input type="button"
+						onclick="userDelete('<%=rs.getString("MEMBER_ID")%>')" value="삭제">
+						<%
+						}
+						%>
+					</td>
 				</tr>
 				<%
 				}
 				%>
 			</table>
+		</section>
 	</form>
 </body>
 </html>
@@ -164,6 +191,20 @@ th {
 	// 검색하기
 	var user = document.user_list;
 	function fnsearch() {
-		location.href = "user_list.jsp?keyword=" + user.keyword.value;
+		location.href = "CrossFitMember3.jsp?keyword=" + user.keyword.value;
+	}
+
+	/* 회원정보 수정 */
+	function userUpdate(USERID) {
+		if (confirm("수정하겠습니까???")) {
+			location.href = "boss_User_Update.jsp?id=" + USERID;
+		}
+	}
+	/* 회원정보 삭제 */
+	function userDelete(USERID) {
+		if (confirm("삭제하겠습니까???")) {
+			location.href = "boss_User_Delete.jsp?id=" + USERID;
+		}
+
 	}
 </script>

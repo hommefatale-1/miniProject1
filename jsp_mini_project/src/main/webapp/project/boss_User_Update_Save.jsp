@@ -31,7 +31,7 @@
 	String phone = phone1 + phone2 + phone3;
 	String birth = birth_Year + birth_Month + birth_Day;
 
-	out.println(
+/* 	out.println(
 			"UPDATE CROSSFITMEMBERS SET "
 					+ "PASSWORD ='"+ pwd +"',"
 					+ "FULL_NAME ='"+ name +"',"
@@ -46,9 +46,9 @@
 					+ "HOBBY='"+ hobby +"',"
 					+ "CMT='"+comment +"'"	
 					+ " WHERE MEMBER_ID = '" + id + "'"
-			);
+			); */
 	/*oracle정보 호촐하여 저장  */
-	/* stmt.executeUpdate(
+	 stmt.executeUpdate(
 			"UPDATE CROSSFITMEMBERS SET "
 			+ "PASSWORD ='"+ pwd +"',"
 			+ "FULL_NAME ='"+ name +"',"
@@ -63,12 +63,12 @@
 			+ "HOBBY='"+ hobby +"',"
 			+ "CMT='"+comment +"'"	
 			+ " WHERE MEMBER_ID = '" + id + "'" 
-			); */
+			); 
 	%>
 </body>
 
 </html>
 <script>
-	/* alert("회원정보를 수정하였습니다");
-	location.href = "CrossFitLogin.jsp" */
+	 alert("회원정보를 수정하였습니다");
+	location.href = "CrossFitLogin.jsp" 
 </script>

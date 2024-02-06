@@ -25,19 +25,19 @@
 	<%-- 등급에 따라 다르게 보여줄려고 이동 --%>
 
 	<%
-	if ("대표님".equals(membershipType)) {
+	if ("대표님".equals(membershipType.trim())) {
 	%>
 	<script>
 		window.location.href = "CrossFitMember1.jsp";
 	</script>
 	<%
-	} else if ("코치님".equals(membershipType)) {
+	} else if ("코치님".equals(membershipType.trim())) {
 	%>
 	<script>
 		window.location.href = "CrossFitMember2.jsp";
 	</script>
 	<%
-	} else if ("회원님".equals(membershipType)) {
+	} else if ("일반회원".equals(membershipType.trim())) {
 	%>
 	<script>
 		window.location.href = "CrossFitMember3.jsp";
@@ -47,12 +47,11 @@
 	%>
 	<script>
 		alert("비회원은 사용이 불가합니다");
-		window.location.href = "CrossFitMain.jsp";
+		out.println(membershipType);
 	</script>
 	<%
 	}
-	}
-	if (userId == null || userId == "") {
+	} else {
 	%>
 	<script>
 		alert("비회원은 사용이 불가합니다");

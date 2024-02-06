@@ -5,7 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>대표자 회원관리 수정</title>
-<link rel="stylesheet" href="../css/style.css">
+
+<link rel="icon" href="../images/Crossfit.png" title="파비콘">
+<link rel="stylesheet" href="../css/CrossFitJoin.css">
 <style>
 /* 모달 스타일 추가 */
 .modal {
@@ -56,7 +58,7 @@
 		<%
 		out.println(session.getAttribute("id"));
 		request.setCharacterEncoding("UTF-8");
-		String userId = (String) session.getAttribute("id");
+		String userId = request.getParameter("id");
 		String sql = "SELECT * FROM CROSSFITMEMBERS WHERE MEMBER_ID = '" + userId + "'";
 		ResultSet rs = stmt.executeQuery(sql);
 		rs.next();
@@ -65,7 +67,7 @@
 
 			<div>
 				<span class="txt_input">아이디 : </span> <input type="text"
-					name="userId" value="<%=userId%>" disablde>
+					name="userId" value="<%= rs.getString("MEMBER_ID")%>" disablde>
 			</div>
 			<div>
 				<span class="txt_input">비밀번호 : </span> <input type="text" name="pwd"
@@ -194,13 +196,13 @@
 	</form>
 </body>
 </html>
-<!-- <script>
+<script>
 	var regex = /^[a-zA-Z0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\-]{4,12}$/;
 	var koreanOnly = /^[가-힣]+$/;
 	var join = document.join;
 	var idCheckPopup;
 
-/* 	/* 폼 제출 전에 유효성 검사 */
+ 	/* 폼 제출 전에 유효성 검사 */
 	function validateForm() {
 		// 중복 확인과 비밀번호 확인 결과를 변수에 저장
 
@@ -216,7 +218,7 @@
 		// 추가적인 유효성 검사 로직을 여기에 추가할 수 있습니다.
 		// 모든 검사를 통과하면 true를 반환하여 폼을 제출
 		return true;
-	} */
+	} 
 
 	/* 비밀번호 중복확인 */
 	function fnPwdCheck() {
@@ -285,4 +287,4 @@
 	function fnback() {
 
 	}
-</script> -->
+</script> 

@@ -91,6 +91,11 @@ th {
 	request.setCharacterEncoding("UTF-8");
 	String userId = (String) session.getAttribute("id");
 	String sql = "SELECT * FROM CROSSFITMEMBERS";
+	String word = request.getParameter("keyword");
+	String keyword = word != null ? word : "";
+	if (keyword != null) {
+		sql += " WHERE FULL_NAME LIKE '%" + keyword + "%'" + " OR MEMBER_ID LIKE '%" + keyword + "%'";
+	}
 	ResultSet rs = stmt.executeQuery(sql);
 	%>
 	<form name="user_list">
@@ -123,8 +128,8 @@ th {
 		<section>
 			<div>
 				<span>검색어 :</span> <input type="text" name="keyword"
-					value="<%=request.getParameter("keyword")%>">
-				<inpu type="button" value="검색하기" onclick="fnsearch()">
+					value="<%=keyword%>"> <input type="button" value="검색하기"
+					onclick="fnsearch()">
 			</div>
 			<table border="1">
 				<tr>
@@ -141,7 +146,7 @@ th {
 					<th>회원 등급</th>
 					<th>회원 취미</th>
 					<th>회원 자기소개</th>
-					<th>회원가입 실패여부</th>
+					<th>로그인 실패여부 및 초기화</th>
 					<th>회원정보 수정</th>
 					<th>회원정보 삭제</th>
 				</tr>
@@ -162,7 +167,9 @@ th {
 					<td><%=rs.getString("MEMBERSHIP_TYPE")%></td>
 					<td><%=rs.getString("HOBBY")%></td>
 					<td><%=rs.getString("CMT")%></td>
-					<td><%=rs.getString("CNT")%></td>
+					<td><%=rs.getString("CNT")%> <input type="button"
+						onclick="user_init('<%=rs.getString("MEMBER_ID")%>')" value="초기화">
+					</td>
 					<td><input type="button"
 						onclick="userUpdate('<%=rs.getString("MEMBER_ID")%>')" value="수정"></td>
 					<td><input type="button"
@@ -172,10 +179,16 @@ th {
 				}
 				%>
 			</table>
+		</section>
 	</form>
+
 </body>
 </html>
 <script>
+	/* 로그인 실패여부 초기화 */
+	function user_init(USERID) {
+		location.href = "boss_User_Login_Init.jsp?id=" + USERID;
+	}
 	// 로그인 화면으로 이동
 	function fnlogin() {
 		location.href = "CrossFitLogin.jsp";
@@ -185,15 +198,16 @@ th {
 	function fnloginOut() {
 		location.href = "CrossFitLoginOut.jsp";
 	}
-
 	// 검색하기
 	var user = document.user_list;
 	function fnsearch() {
-		location.href = "user_list.jsp?keyword=" + user.keyword.value;
+		location.href = "CrossFitMember1.jsp?keyword=" + user.keyword.value;
 	}
 	/* 회원정보 수정 */
 	function userUpdate(USERID) {
-		location.href = "boss_User_Update.jsp?id=" + USERID;
+		if (confirm("수정하겠습니까???")) {
+			location.href = "boss_User_Update.jsp?id=" + USERID;
+		}
 	}
 	/* 회원정보 삭제 */
 	function userDelete(USERID) {
